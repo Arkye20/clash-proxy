@@ -1,0 +1,7 @@
+payload:
+  - '+.openai.com'
+  - '+.oaistatic.com'
+  - '+.oaiusercontent.com'
+  - '+.poe.com'
+  - '+.auth0.com'
+  - '+.chatgpt.com'

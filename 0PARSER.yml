@@ -1,0 +1,295 @@
+# 要使用这个parser,在订阅链接后面加上#parser
+# 这个parser提取出Clash订阅链接中的proxy并且去除掉其他的rules和proxy groups
+# 然后再加入自定义配置的proxy groups和rules
+# 达到类似引用proxy providers的效果
+parsers:
+  # 这里设置如何匹配url,也可以直接使用url
+  # url: www.url.com
+  - reg: ^.*#parser$
+  # 下面是删除服务商自带的策略组和规则
+    code: |
+        module.exports.parse = (raw, { yaml }) => {
+          const rawObj = yaml.parse(raw)
+          const groups = []
+          const rules = []
+          return yaml.stringify({ ...rawObj, 'proxy-groups': groups, rules })
+        } 
+    # 往yaml文件中添加配置
+    yaml:
+        # 建立自定义的proxy groups
+        prepend-proxy-groups: # 建立策略组
+        - name: 🌐国外流量
+          type: select
+          proxies:
+            - ⚖️🇭🇰-负载均衡
+            - ⚖️🇭🇰-负载均衡-中继动态
+            - ⚖️🇭🇰-负载均衡-中继NF
+            - ⚖️🇭🇰-负载均衡-IPLC
+            - 🇭🇰
+            - 🇹🇼
+            - 🇸🇬
+            - 🇯🇵
+            - 🇺🇸
+            - 🏳️
+            - 🚀直接连接
+        - name: 💬国外媒体-文字图片
+          type: select
+          proxies:
+            - 🌐国外流量
+            - ⚖️🇭🇰-负载均衡
+            - ⚖️🇭🇰-负载均衡-中继动态
+            - ⚖️🇭🇰-负载均衡-中继NF
+            - ⚖️🇭🇰-负载均衡-IPLC
+            - 🇭🇰
+            - 🇹🇼
+            - 🇸🇬
+            - 🇯🇵
+            - 🇺🇸
+            - 🏳️
+        - name: 🚚大流量
+          type: select
+          proxies:
+            - 🌐国外流量
+            - ⚖️🇭🇰-负载均衡
+            - ⚖️🇭🇰-负载均衡-中继动态
+            - ⚖️🇭🇰-负载均衡-中继NF
+            - ⚖️🇭🇰-负载均衡-IPLC
+            - 🇭🇰
+            - 🇹🇼
+            - 🇸🇬
+            - 🇯🇵
+            - 🇺🇸
+            - 🏳️
+        - name: ⚓️其他流量
+          type: select
+          proxies:
+            - 🌐国外流量
+            - 🚀直接连接
+            - ⚖️🇭🇰-负载均衡
+            - ⚖️🇭🇰-负载均衡-中继动态
+            - ⚖️🇭🇰-负载均衡-中继NF
+            - ⚖️🇭🇰-负载均衡-IPLC
+            - 🇭🇰
+            - 🇹🇼
+            - 🇸🇬
+            - 🇯🇵
+            - 🇺🇸
+            - 🏳️
+        - name: ✈️Telegram
+          type: select
+          proxies:
+            - 🌐国外流量
+            - ⚖️🇭🇰-负载均衡
+            - ⚖️🇭🇰-负载均衡-中继动态
+            - ⚖️🇭🇰-负载均衡-中继NF
+            - ⚖️🇭🇰-负载均衡-IPLC
+            - 🇭🇰
+            - 🇹🇼
+            - 🇸🇬
+            - 🇯🇵
+            - 🇺🇸
+            - 🏳️
+        - name: 📽Netflix
+          type: select
+          proxies:
+            - 🌐国外流量
+            - ⚖️🇭🇰-负载均衡
+            - ⚖️🇭🇰-负载均衡-中继动态
+            - ⚖️🇭🇰-负载均衡-中继NF
+            - ⚖️🇭🇰-负载均衡-IPLC
+            - 🇭🇰
+            - 🇹🇼
+            - 🇸🇬
+            - 🇯🇵
+            - 🇺🇸
+            - 🏳️
+        - name: 😀OpenAI
+          type: select
+          proxies:
+            - 🌐国外流量
+            - ⚖️🇭🇰-负载均衡
+            - ⚖️🇭🇰-负载均衡-中继动态
+            - ⚖️🇭🇰-负载均衡-中继NF
+            - ⚖️🇭🇰-负载均衡-IPLC
+            - 🇭🇰
+            - 🇹🇼
+            - 🇸🇬
+            - 🇯🇵
+            - 🇺🇸
+            - 🏳️
+        - name: 🎮Steam
+          type: select
+          proxies:
+            - 🌐国外流量
+            - ⚖️🇭🇰-负载均衡
+            - ⚖️🇭🇰-负载均衡-中继动态
+            - ⚖️🇭🇰-负载均衡-中继NF
+            - ⚖️🇭🇰-负载均衡-IPLC
+            - 🇭🇰
+            - 🇹🇼
+            - 🇸🇬
+            - 🇯🇵
+            - 🇺🇸
+            - 🏳️
+            - 🚀直接连接
+        - name: 🎬哔哩哔哩
+          type: select
+          proxies:
+            - 🚀直接连接
+            - 🇭🇰
+            - 🇹🇼
+        - name: 🍎苹果服务
+          type: select
+          proxies:
+            - 🚀直接连接
+            - 🌐国外流量
+        - name: 🚀直接连接
+          type: select
+          proxies:
+            - DIRECT
+        - name: ⚖️🇭🇰-负载均衡
+          type: load-balance
+          url: http://www.google.com/generate_204
+          interval: 300
+          strategy: consistent-hashing
+          proxies:
+        - name: ⚖️🇭🇰-负载均衡-中继动态
+          type: load-balance
+          url: http://www.google.com/generate_204
+          interval: 300
+          strategy: consistent-hashing
+          proxies:
+        - name: ⚖️🇭🇰-负载均衡-中继NF
+          type: load-balance
+          url: http://www.google.com/generate_204
+          interval: 300
+          strategy: consistent-hashing
+          proxies:
+        - name: ⚖️🇭🇰-负载均衡-IPLC
+          type: load-balance
+          url: http://www.google.com/generate_204
+          interval: 300
+          strategy: consistent-hashing
+          proxies:
+        - name: 🇭🇰
+          type: select
+          proxies:
+        - name: 🇹🇼
+          type: select
+          proxies:
+        - name: 🇸🇬
+          type: select
+          proxies:
+        - name: 🇯🇵
+          type: select
+          proxies:
+        - name: 🇺🇸
+          type: select
+          proxies:
+        - name: 🏳️
+          type: select
+          proxies:
+        
+        # 往proxy groups中加入proxy节点 使用正则表达式,多个表达式用|分隔
+        commands:
+          - proxy-groups.(⚖️🇭🇰-负载均衡).proxies=[]proxyNames|HK \d{3}
+          - proxy-groups.(⚖️🇭🇰-负载均衡-中继动态).proxies=[]proxyNames|香港.+中继\s动态
+          - proxy-groups.(⚖️🇭🇰-负载均衡-中继NF).proxies=[]proxyNames|香港.+中继\sNF
+          - proxy-groups.(⚖️🇭🇰-负载均衡-IPLC).proxies=[]proxyNames|IPLC.*香港
+          - proxy-groups.(🇭🇰).proxies=[]proxyNames|香港|HK
+          - proxy-groups.(🇹🇼).proxies=[]proxyNames|台湾|TW
+          - proxy-groups.(🇸🇬).proxies=[]proxyNames|狮城|新加坡|SG
+          - proxy-groups.(🇯🇵).proxies=[]proxyNames|日本|JP
+          - proxy-groups.(🇺🇸).proxies=[]proxyNames|美国|US
+          - proxy-groups.(🏳️).proxies=[]proxyNames|韩国|英国|俄罗斯|阿根廷|马来|土耳其|RU
+
+        # 配置自定义规则
+        prepend-rules:
+          # 配置Github上的规则集
+          - RULE-SET,applications,DIRECT
+          - DOMAIN,clash.razord.top,DIRECT
+          - DOMAIN,yacd.haishan.me,DIRECT
+          - RULE-SET,openai,😀OpenAI
+          - RULE-SET,massivedata,🚚大流量
+          - RULE-SET,bilibili,🎬哔哩哔哩
+          - RULE-SET,netflix,📽Netflix
+          - RULE-SET,private,DIRECT
+          - RULE-SET,reject,REJECT
+          - RULE-SET,icloud,🍎苹果服务
+          - RULE-SET,apple,🍎苹果服务
+          - RULE-SET,google,🌐国外流量
+          - RULE-SET,proxy,💬国外媒体-文字图片
+          - RULE-SET,direct,DIRECT
+          - RULE-SET,lancidr,DIRECT
+          - RULE-SET,cncidr,DIRECT
+          - RULE-SET,steam,🎮Steam
+          - RULE-SET,telegramcidr,✈️Telegram
+          - GEOIP,LAN,DIRECT,no-resolve
+          - GEOIP,CN,DIRECT,no-resolve
+          - MATCH,⚓️其他流量
+        # 引用Github上的规则集 domain是url,ipcidr是数字ip,classical是程序名称
+        mix-rule-providers:
+          reject:
+            type: file
+            behavior: domain
+            path: ./providers/rules/reject.txt
+          icloud:
+            type: file
+            behavior: domain
+            path: ./providers/rules/icloud.txt
+          apple:
+            type: file
+            behavior: domain
+            path: ./providers/rules/apple.txt
+          google:
+            type: file
+            behavior: domain
+            path: ./providers/rules/google.txt
+          proxy:
+            type: file
+            behavior: domain
+            path: ./providers/rules/proxy.txt
+          direct:
+            type: file
+            behavior: domain
+            path: ./providers/rules/direct.txt
+          private:
+            type: file
+            behavior: domain
+            path: ./providers/rules/private.txt
+          telegramcidr:
+            type: file
+            behavior: ipcidr
+            path: ./providers/rules/telegramcidr.txt
+          cncidr:
+            type: file
+            behavior: ipcidr
+            path: ./providers/rules/cncidr.txt
+          lancidr:
+            type: file
+            behavior: ipcidr
+            path: ./providers/rules/lancidr.txt
+          applications:
+            type: file
+            behavior: classical
+            path: ./providers/rules/applications.txt
+          netflix:
+            type: file
+            behavior: domain
+            path: ./providers/rules/netflix.txt
+          bilibili:
+            type: file
+            behavior: domain
+            path: ./providers/rules/bilibili.txt
+          massivedata:
+            type: file
+            behavior: domain
+            path: ./providers/rules/massivedata.txt
+          openai:
+            type: file
+            behavior: domain
+            path: ./providers/rules/openai.txt
+          steam:
+            type: file
+            behavior: domain
+            path: ./providers/rules/steam.txt

@@ -1,0 +1,7 @@
+payload:
+  - '+.biliapi.com'
+  - '+.biliapi.net'
+  - '+.bilibili.com'
+  - '+.bilibili.tv'
+  - '+.bilivideo.com'
+  - 'manga.bilibili.com'

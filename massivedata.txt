@@ -1,0 +1,6 @@
+payload:
+  - '+.googlevideo.com'
+  - '+.ttvnw.net'
+  - 'dgeft87wbj63p.cloudfront.net'
+  - 'd2nvs31859zcd8.cloudfront.net'
+  - 'd1m7jfoe9zdc1j.cloudfront.net'
