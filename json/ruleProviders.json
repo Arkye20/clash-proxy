@@ -1,0 +1,82 @@
+{
+    "direct": {
+        "type": "file",
+        "behavior": "domain",
+        "path": "D:/Study/Projects/clash-proxy/rules/direct.txt"
+    },
+    "reject": {
+        "type": "file",
+        "behavior": "domain",
+        "path": "D:/Study/Projects/clash-proxy/rules/reject.txt"
+    },
+    "icloud": {
+        "type": "file",
+        "behavior": "domain",
+        "path": "D:/Study/Projects/clash-proxy/rules/icloud.txt"
+    },
+    "apple": {
+        "type": "file",
+        "behavior": "domain",
+        "path": "D:/Study/Projects/clash-proxy/rules/apple.txt"
+    },
+    "google": {
+        "type": "file",
+        "behavior": "domain",
+        "path": "D:/Study/Projects/clash-proxy/rules/google.txt"
+    },
+    "proxy": {
+        "type": "file",
+        "behavior": "domain",
+        "path": "D:/Study/Projects/clash-proxy/rules/proxy.txt"
+    },
+    "private": {
+        "type": "file",
+        "behavior": "domain",
+        "path": "D:/Study/Projects/clash-proxy/rules/private.txt"
+    },
+    "netflix": {
+        "type": "file",
+        "behavior": "domain",
+        "path": "D:/Study/Projects/clash-proxy/rules/netflix.txt"
+    },
+    "bilibili": {
+        "type": "file",
+        "behavior": "domain",
+        "path": "D:/Study/Projects/clash-proxy/rules/bilibili.txt"
+    },
+    "massivedata": {
+        "type": "file",
+        "behavior": "domain",
+        "path": "D:/Study/Projects/clash-proxy/rules/massivedata.txt"
+    },
+    "openai": {
+        "type": "file",
+        "behavior": "domain",
+        "path": "D:/Study/Projects/clash-proxy/rules/openai.txt"
+    },
+    "steam": {
+        "type": "file",
+        "behavior": "domain",
+        "path": "D:/Study/Projects/clash-proxy/rules/steam.txt"
+    },
+    "telegramcidr": {
+        "type": "file",
+        "behavior": "ipcidr",
+        "path": "D:/Study/Projects/clash-proxy/rules/telegramcidr.txt"
+    },
+    "cncidr": {
+        "type": "file",
+        "behavior": "ipcidr",
+        "path": "D:/Study/Projects/clash-proxy/rules/cncidr.txt"
+    },
+    "lancidr": {
+        "type": "file",
+        "behavior": "ipcidr",
+        "path": "D:/Study/Projects/clash-proxy/rules/lancidr.txt"
+    },
+    "applications": {
+        "type": "file",
+        "behavior": "classical",
+        "path": "D:/Study/Projects/clash-proxy/rules/applications.txt"
+    }
+}

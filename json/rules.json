@@ -1,0 +1,23 @@
+[
+    "RULE-SET,applications,DIRECT",
+    "DOMAIN,clash.razord.top,DIRECT",
+    "DOMAIN,yacd.haishan.me,DIRECT",
+    "RULE-SET,openai,😀OpenAI",
+    "RULE-SET,massivedata,🚚大流量",
+    "RULE-SET,bilibili,🎬哔哩哔哩",
+    "RULE-SET,netflix,📽Netflix",
+    "RULE-SET,private,DIRECT",
+    "RULE-SET,reject,REJECT",
+    "RULE-SET,icloud,🍎苹果服务",
+    "RULE-SET,apple,🍎苹果服务",
+    "RULE-SET,google,🌐国外流量",
+    "RULE-SET,proxy,💬国外媒体-文字图片",
+    "RULE-SET,direct,DIRECT",
+    "RULE-SET,lancidr,DIRECT",
+    "RULE-SET,cncidr,DIRECT",
+    "RULE-SET,steam,🎮Steam",
+    "RULE-SET,telegramcidr,✈️Telegram",
+    "GEOIP,LAN,DIRECT,no-resolve",
+    "GEOIP,CN,DIRECT,no-resolve",
+    "MATCH,⚓️其他流量"
+]
