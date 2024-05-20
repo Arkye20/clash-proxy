@@ -42,7 +42,37 @@ module.exports.parse = async (raw, { yaml }) => {
         fs.readFileSync(proxyGroupsJsonPath, 'utf8')
     ).concat([
         {
-            name: "⚖️🇭🇰-负载均衡",
+            name: "Hong Kong",
+            type: "select",
+            proxies: HKIPLCNames.concat(HKRelayDynNames).concat(HKRelayNFNames).concat(HKDirectNames)
+        },
+        {
+            name: "Taiwan",
+            type: "select",
+            proxies: TWNames
+        },
+        {
+            name: "Singapore",
+            type: "select",
+            proxies: SGNames
+        },
+        {
+            name: "Japan",
+            type: "select",
+            proxies: JPNames
+        },
+        {
+            name: "United States",
+            type: "select",
+            proxies: USNames
+        },
+        {
+            name: "Other Countries",
+            type: "select",
+            proxies: OtherNames
+        },
+        {
+            name: "⚖️HK-Direct",
             type: "load-balance",
             url: "http://www.google.com/generate_204",
             interval: 300,
@@ -50,7 +80,7 @@ module.exports.parse = async (raw, { yaml }) => {
             proxies: HKDirectNames
         },
         {
-            name: "⚖️🇭🇰-负载均衡-中继动态",
+            name: "⚖️HK-Relay-Dynamic",
             type: "load-balance",
             url: "http://www.google.com/generate_204",
             interval: 300,
@@ -58,7 +88,7 @@ module.exports.parse = async (raw, { yaml }) => {
             proxies: HKRelayDynNames
         },
         {
-            name: "⚖️🇭🇰-负载均衡-中继NF",
+            name: "⚖️HK-Relay-NF",
             type: "load-balance",
             url: "http://www.google.com/generate_204",
             interval: 300,
@@ -66,42 +96,12 @@ module.exports.parse = async (raw, { yaml }) => {
             proxies: HKRelayNFNames
         },
         {
-            name: "⚖️🇭🇰-负载均衡-IPLC",
+            name: "⚖️HK-IPLC",
             type: "load-balance",
             url: "http://www.google.com/generate_204",
             interval: 300,
             strategy: "consistent-hashing",
             proxies: HKIPLCNames
-        },
-        {
-            name: "🇭🇰",
-            type: "select",
-            proxies: HKIPLCNames.concat(HKRelayDynNames).concat(HKRelayNFNames).concat(HKDirectNames)
-        },
-        {
-            name: "🇹🇼",
-            type: "select",
-            proxies: TWNames
-        },
-        {
-            name: "🇸🇬",
-            type: "select",
-            proxies: SGNames
-        },
-        {
-            name: "🇯🇵",
-            type: "select",
-            proxies: JPNames
-        },
-        {
-            name: "🇺🇸",
-            type: "select",
-            proxies: USNames
-        },
-        {
-            name: "🏳️",
-            type: "select",
-            proxies: OtherNames
         },
     ])
 

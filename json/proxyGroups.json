@@ -3,16 +3,16 @@
         "name": "🌐国外流量",
         "type": "select",
         "proxies": [
-            "⚖️🇭🇰-负载均衡",
-            "⚖️🇭🇰-负载均衡-中继动态",
-            "⚖️🇭🇰-负载均衡-中继NF",
-            "⚖️🇭🇰-负载均衡-IPLC",
-            "🇭🇰",
-            "🇹🇼",
-            "🇸🇬",
-            "🇯🇵",
-            "🇺🇸",
-            "🏳️",
+            "⚖️HK-Direct",
+            "⚖️HK-Relay-Dynamic",
+            "⚖️HK-Relay-NF",
+            "⚖️HK-IPLC",
+            "Hong Kong",
+            "Taiwan",
+            "Singapore",
+            "Japan",
+            "United States",
+            "Other Countries",
             "🚀直接连接"
         ]
     },
@@ -21,16 +21,16 @@
         "type": "select",
         "proxies": [
             "🌐国外流量",
-            "⚖️🇭🇰-负载均衡",
-            "⚖️🇭🇰-负载均衡-中继动态",
-            "⚖️🇭🇰-负载均衡-中继NF",
-            "⚖️🇭🇰-负载均衡-IPLC",
-            "🇭🇰",
-            "🇹🇼",
-            "🇸🇬",
-            "🇯🇵",
-            "🇺🇸",
-            "🏳️"
+            "⚖️HK-Direct",
+            "⚖️HK-Relay-Dynamic",
+            "⚖️HK-Relay-NF",
+            "⚖️HK-IPLC",
+            "Hong Kong",
+            "Taiwan",
+            "Singapore",
+            "Japan",
+            "United States",
+            "Other Countries"
         ]
     },
     {
@@ -38,16 +38,10 @@
         "type": "select",
         "proxies": [
             "🌐国外流量",
-            "⚖️🇭🇰-负载均衡",
-            "⚖️🇭🇰-负载均衡-中继动态",
-            "⚖️🇭🇰-负载均衡-中继NF",
-            "⚖️🇭🇰-负载均衡-IPLC",
-            "🇭🇰",
-            "🇹🇼",
-            "🇸🇬",
-            "🇯🇵",
-            "🇺🇸",
-            "🏳️"
+            "⚖️HK-Direct",
+            "⚖️HK-Relay-Dynamic",
+            "⚖️HK-Relay-NF",
+            "⚖️HK-IPLC"
         ]
     },
     {
@@ -56,16 +50,11 @@
         "proxies": [
             "🌐国外流量",
             "🚀直接连接",
-            "⚖️🇭🇰-负载均衡",
-            "⚖️🇭🇰-负载均衡-中继动态",
-            "⚖️🇭🇰-负载均衡-中继NF",
-            "⚖️🇭🇰-负载均衡-IPLC",
-            "🇭🇰",
-            "🇹🇼",
-            "🇸🇬",
-            "🇯🇵",
-            "🇺🇸",
-            "🏳️"
+            "⚖️HK-Direct",
+            "⚖️HK-Relay-Dynamic",
+            "⚖️HK-Relay-NF",
+            "⚖️HK-IPLC",
+            "Other Countries"
         ]
     },
     {
@@ -73,16 +62,10 @@
         "type": "select",
         "proxies": [
             "🌐国外流量",
-            "⚖️🇭🇰-负载均衡",
-            "⚖️🇭🇰-负载均衡-中继动态",
-            "⚖️🇭🇰-负载均衡-中继NF",
-            "⚖️🇭🇰-负载均衡-IPLC",
-            "🇭🇰",
-            "🇹🇼",
-            "🇸🇬",
-            "🇯🇵",
-            "🇺🇸",
-            "🏳️"
+            "⚖️HK-Direct",
+            "⚖️HK-Relay-Dynamic",
+            "⚖️HK-Relay-NF",
+            "⚖️HK-IPLC"
         ]
     },
     {
@@ -90,16 +73,16 @@
         "type": "select",
         "proxies": [
             "🌐国外流量",
-            "⚖️🇭🇰-负载均衡",
-            "⚖️🇭🇰-负载均衡-中继动态",
-            "⚖️🇭🇰-负载均衡-中继NF",
-            "⚖️🇭🇰-负载均衡-IPLC",
-            "🇭🇰",
-            "🇹🇼",
-            "🇸🇬",
-            "🇯🇵",
-            "🇺🇸",
-            "🏳️"
+            "⚖️HK-Direct",
+            "⚖️HK-Relay-Dynamic",
+            "⚖️HK-Relay-NF",
+            "⚖️HK-IPLC",
+            "Hong Kong",
+            "Taiwan",
+            "Singapore",
+            "Japan",
+            "United States",
+            "Other Countries"
         ]
     },
     {
@@ -107,16 +90,8 @@
         "type": "select",
         "proxies": [
             "🌐国外流量",
-            "⚖️🇭🇰-负载均衡",
-            "⚖️🇭🇰-负载均衡-中继动态",
-            "⚖️🇭🇰-负载均衡-中继NF",
-            "⚖️🇭🇰-负载均衡-IPLC",
-            "🇭🇰",
-            "🇹🇼",
-            "🇸🇬",
-            "🇯🇵",
-            "🇺🇸",
-            "🏳️"
+            "⚖️HK-IPLC",
+            "United States"
         ]
     },
     {
@@ -124,16 +99,16 @@
         "type": "select",
         "proxies": [
             "🌐国外流量",
-            "⚖️🇭🇰-负载均衡",
-            "⚖️🇭🇰-负载均衡-中继动态",
-            "⚖️🇭🇰-负载均衡-中继NF",
-            "⚖️🇭🇰-负载均衡-IPLC",
-            "🇭🇰",
-            "🇹🇼",
-            "🇸🇬",
-            "🇯🇵",
-            "🇺🇸",
-            "🏳️",
+            "⚖️HK-Direct",
+            "⚖️HK-Relay-Dynamic",
+            "⚖️HK-Relay-NF",
+            "⚖️HK-IPLC",
+            "Hong Kong",
+            "Taiwan",
+            "Singapore",
+            "Japan",
+            "United States",
+            "Other Countries",
             "🚀直接连接"
         ]
     },
@@ -142,8 +117,8 @@
         "type": "select",
         "proxies": [
             "🚀直接连接",
-            "🇭🇰",
-            "🇹🇼"
+            "Hong Kong",
+            "Taiwan"
         ]
     },
     {
